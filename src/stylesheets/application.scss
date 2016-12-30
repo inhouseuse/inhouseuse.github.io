@@ -1,0 +1,10 @@
+// 外部ライブラリのCSS
+// @import 'normalize';
+
+// アプリケーションのCSS
+@import 'lib/*';
+@import 'base';
+@import 'components/*';
+@import 'modules/*';
+@import 'vendor/*';
+@import 'patches/*';
