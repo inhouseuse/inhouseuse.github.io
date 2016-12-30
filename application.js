@@ -5,3 +5,5 @@ document.addEventListener('DOMContentLoaded', function () {
   var msg = 'hello World';
   h.innerHTML(msg);
 }, false);
+
+var v = "aa";
