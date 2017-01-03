@@ -2,9 +2,12 @@
 @import 'reset';
 // @import 'bootstrap';
 
-// アプリケーションのCSS
-@import 'lib/*';
+// ベースのCSS
 @import 'base';
+
+// パーツ毎のCSS
+@import 'lib/*';
+@import 'animation/*';
 @import 'components/*';
 @import 'modules/*';
 @import 'vendor/*';

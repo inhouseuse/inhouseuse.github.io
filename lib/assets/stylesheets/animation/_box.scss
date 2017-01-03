@@ -1,0 +1,20 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: #000000;
+    animation: rotation 3s ease 0s 1 alternate none running;
+}
+
+@keyframes rotation {
+    0% {
+        transform: scale(.3);
+    } 
+    50% {
+        transform: scale(.6) rotate(-45deg);
+        background-color: #ff00ff;
+    } 
+    100% {
+        transform: scale(1) rotate(180deg);
+        background-color: #ffff00;
+    } 
+}

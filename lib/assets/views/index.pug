@@ -1,18 +1,17 @@
 doctype html
 html(lang="ja")
-include common/_head.pug
+include common/_html_head.pug
 body
-    
-    section.top-page#js_top_page
+    include common/_header.pug
+    section.top-page.js_page
         .container
-            .logo
+            .logo#js_logo
                 .logo__image
                 .logo__title InHouseUse
-    section.page
+    section.page.js_page
         .container
             .logo__sub-title 社内勉強会用のランディングページ
-        
-    
+            .box
 
 
     include common/_javascript.pug

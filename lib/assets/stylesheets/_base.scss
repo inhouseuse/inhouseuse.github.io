@@ -3,6 +3,16 @@ body {
     // background: #e6e6e6;
 }
 
+header {
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    width: 100%;
+    z-index: 1;
+}
+
+
 .container {
     width: 90%;
     margin: 0 auto;

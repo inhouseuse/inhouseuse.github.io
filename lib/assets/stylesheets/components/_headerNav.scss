@@ -1,0 +1,16 @@
+.headerNav {
+    display: flex;
+    // justify-content: flex-end;
+    width: 100%;
+}
+
+.headerNav > li {
+    margin: 10px;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.headerNav > li:first-child {
+    margin-right: auto;
+}

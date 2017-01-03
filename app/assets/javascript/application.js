@@ -14,7 +14,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // });
 
 document.addEventListener('DOMContentLoaded', function () {
-  (0, _jquery2.default)('#js_top_page').height(window.innerHeight);
+  // 初期表示設定
+  (0, _jquery2.default)('.js_page').height(window.innerHeight); // トップページの高さをウィンドウのインナーの高さまで拡大
+  (0, _jquery2.default)('#js_logo').addClass('fade_in_up');
 }, false);
 
 },{"jquery":2}],2:[function(require,module,exports){
