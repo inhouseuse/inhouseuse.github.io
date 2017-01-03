@@ -1,0 +1,19 @@
+.logo {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.logo__image {
+    width: 65px;
+    height: 65px;
+    background: url($image_path + "/logo_w.png") no-repeat top left;
+    background-size: cover;
+}
+
+.logo__title {
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Reem Kufi', sans-serif;
+    color: #ffffff;
+}
