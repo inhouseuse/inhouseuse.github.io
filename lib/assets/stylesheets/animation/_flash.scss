@@ -1,0 +1,19 @@
+.flash {
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}

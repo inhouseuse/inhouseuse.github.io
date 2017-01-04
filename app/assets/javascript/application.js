@@ -17,7 +17,28 @@ document.addEventListener('DOMContentLoaded', function () {
   // 初期表示設定
   (0, _jquery2.default)('.js_page').height(window.innerHeight); // トップページの高さをウィンドウのインナーの高さまで拡大
   (0, _jquery2.default)('#js_logo').addClass('fade_in_up');
+  // $('#js_nav').addClass('fade_in');
+  (0, _jquery2.default)('#js_nav').addClass('flash');
+
+  // for(let key in initialDisplayObj) {
+  // }
 }, false);
+
+(0, _jquery2.default)('#js_nav').click(function () {
+  (0, _jquery2.default)('html,body').animate({
+    scrollTop: (0, _jquery2.default)('#js_second-page').offset().top
+  });
+});
+
+// let initialDisplayObj = {
+//   fade_in_up: 'js_logo',
+//   fade_in: 'js_nav',
+//   flash: 'js_na',
+// };
+
+// let addClassObj = ($obj, className) => {
+//   $obj.addClass(className);
+// };
 
 },{"jquery":2}],2:[function(require,module,exports){
 /*!

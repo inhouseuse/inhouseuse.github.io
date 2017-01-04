@@ -4,13 +4,65 @@
     width: 100%;
 }
 
-.headerNav > li {
-    margin: 10px;
-    padding: 20px;
-    color: #fff;
-    text-align: center;
+.headerNav>li {
+    font-size: 18px;
 }
 
-.headerNav > li:first-child {
+.headerNav>li:first-child {
     margin-right: auto;
+}
+
+.headerNav__anchor {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    color: #ffffff;
+}
+.headerNav__anchor--link {
+    @extend .headerNav__anchor;
+    position: relative;
+    // border: 3px solid #ffffff;
+
+    &:before,&:after {
+        position: absolute;
+        bottom: 10px;
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 2px; 
+        background: #ffffff;
+        transition: 0.5s;
+    }
+
+    &:before{
+    left: 50%;
+    }
+
+    &:after{
+    right: 50%;
+    }
+
+    &:hover:before,
+    &:hover:after{
+    width: 50%;
+    }
+
+}
+
+
+.headerNav__image {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url($image_path + "/logo_w.png") no-repeat bottom left;
+    background-size: cover;
+}
+
+.headerNav__logo {
+    font-size: 22px;
+    margin-left: 2px;
+    display: inline-block;
+    font-family: 'Reem Kufi', sans-serif;
 }

@@ -2,8 +2,10 @@ header
     .container
         nav
             ul.headerNav
-                li: a(link="https://github.com/inhouseuse") InHouseUse
-                li: a(link="https://github.com/inhouseuse"): i.fa.fa-home Home
-                li: a(link="https://github.com/inhouseuse"): i.fa.fa-home Github
-                li: a(link="https://github.com/inhouseuse"): i.fa.fa-home SpeakerDeck
-                li: a(link="https://github.com/inhouseuse"): i.fa.fa-home Contact
+                li: a.headerNav__anchor(href="./", target="_blank")
+                    span.headerNav__image  
+                    span.headerNav__logo InHouseUse
+                li: a.headerNav__anchor--link(href="./", target="_blank"): i.fa.fa-home  Home
+                li: a.headerNav__anchor--link(href="https://github.com/inhouseuse", target="_blank"): i.fa.fa-github  Github
+                li: a.headerNav__anchor--link(href="https://speakerdeck.com/undefined_name", target="_blank"): i.fa.fa-slideshare  SpeakerDeck
+                li: a.headerNav__anchor--link(href="https://github.com/inhouseuse", target="_blank"): i.fa.fa-envelope-o  Contact

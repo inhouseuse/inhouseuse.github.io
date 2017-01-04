@@ -113,6 +113,12 @@ header {
     width: 100%;
 }
 
+a {
+    text-decoration: none; 
+
+    color: #000000;
+}
+
 .container {
     width: 90%;
     margin: 0 auto;
@@ -168,6 +174,48 @@ header {
     }
 }
 
+.fade_in {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-play-state: running; 
+    animation-timing-function: ease;
+    animation-delay: 4s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.flash {
+    animation-name: flash;
+    animation-duration: 1s;
+    animation-play-state: running; 
+    animation-timing-function: linear;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+    animation-fill-mode: forwards;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .headerNav {
     display: flex;
 
@@ -175,16 +223,69 @@ header {
 }
 
 .headerNav > li {
-    margin: 10px;
-    padding: 20px;
-
-    text-align: center; 
-
-    color: #FFFFFF;
+    font-size: 18px;
 }
 
 .headerNav > li:first-child {
     margin-right: auto;
+}
+
+.headerNav__anchor, .headerNav__anchor--link {
+    display: block;
+
+    margin: 10px;
+    padding: 10px;
+
+    text-align: center;
+
+    color: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.headerNav__anchor--link {
+    position: relative;
+}
+.headerNav__anchor--link:before, .headerNav__anchor--link:after {
+    position: absolute;
+    bottom: 10px;
+
+    display: inline-block;
+
+    width: 0;
+    height: 2px;
+
+    content: "";
+    transition: 0.5s; 
+
+    background: #FFFFFF;
+}
+.headerNav__anchor--link:before {
+    left: 50%;
+}
+.headerNav__anchor--link:after {
+    right: 50%;
+}
+.headerNav__anchor--link:hover:before, .headerNav__anchor--link:hover:after {
+    width: 50%;
+}
+
+.headerNav__image {
+    display: inline-block;
+
+    width: 22px;
+    height: 22px;
+
+    background: url("../images/logo_w.png") no-repeat bottom left;
+    background-size: cover;
+}
+
+.headerNav__logo {
+    font-family: "Reem Kufi", sans-serif; 
+    font-size: 22px;
+
+    display: inline-block;
+
+    margin-left: 2px;
 }
 
 .logo {
@@ -211,6 +312,30 @@ header {
     text-align: center;
 
     color: #FFFFFF;
+}
+
+.nav {
+    font-size: 50px;
+
+    position: fixed;
+    z-index: 1;
+    bottom: 10%;
+
+    display: flex;
+
+    width: 100%; 
+
+    cursor: pointer;
+
+    color: #F6F6F6;
+}
+
+.nav__down {
+    display: flex;
+
+    opacity: 0; 
+
+    justify-content: center;
 }
 
 .top-page {

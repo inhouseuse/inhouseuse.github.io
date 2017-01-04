@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    position: fixed;
+    bottom:10%;
+    font-size: 50px;
+    color:#f6f6f6;
+    z-index: 1;
+    cursor: pointer;
+    width: 100%;
+}
+
+.nav__down {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
