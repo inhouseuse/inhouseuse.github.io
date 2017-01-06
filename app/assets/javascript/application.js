@@ -16,7 +16,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 document.addEventListener('DOMContentLoaded', function () {
   // 初期表示設定
   (0, _jquery2.default)('.js_page').height(window.innerHeight); // トップページの高さをウィンドウのインナーの高さまで拡大
-  (0, _jquery2.default)('#js_logo').addClass('fade_in_up');
+  (0, _jquery2.default)('#js_fade_in_up').addClass('fade_in_up');
+  (0, _jquery2.default)('#js_fade_in').addClass('fade_in');
   // $('#js_nav').addClass('fade_in');
   (0, _jquery2.default)('#js_nav').addClass('flash');
 

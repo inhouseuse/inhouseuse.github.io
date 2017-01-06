@@ -151,7 +151,7 @@ a {
 
 .fade_in_up {
     animation-name: fadeInUp;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-play-state: running; 
     animation-timing-function: ease;
     animation-delay: 1s;
@@ -179,7 +179,7 @@ a {
     animation-duration: 1s;
     animation-play-state: running; 
     animation-timing-function: ease;
-    animation-delay: 4s;
+    animation-delay: 3s;
     animation-iteration-count: 1;
     animation-direction: alternate;
 
@@ -288,6 +288,17 @@ a {
     margin-left: 2px;
 }
 
+.logos {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center; 
+
+    color: #FFFFFF;
+
+    justify-content: center;
+}
+
 .logo {
     display: flex;
 
@@ -306,12 +317,14 @@ a {
 }
 
 .logo__title {
-    font-family: "Reem Kufi", sans-serif;
+    font-family: "Reem Kufi", sans-serif; 
     font-size: 80px;
+}
 
-    text-align: center;
+.logo__sub-title {
+    font-size: 30px;
 
-    color: #FFFFFF;
+    opacity: 0;
 }
 
 .nav {
