@@ -1,0 +1,16 @@
+.article {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.article__image {
+    width: 120px;
+    background: url($image_path + "/cap20161130.png") no-repeat top left;
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
+.article__desc {
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);    
+}

@@ -16,7 +16,6 @@
     display: block;
     margin: 10px;
     padding: 10px;
-    color: #fff;
     text-align: center;
     color: #ffffff;
 }
@@ -57,6 +56,14 @@
     width: 22px;
     height: 22px;
     background: url($image_path + "/logo_w.png") no-repeat bottom left;
+    background-size: cover;
+}
+
+.headerNav__image--black {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background: url($image_path + "/logo.png") no-repeat bottom left;
     background-size: cover;
 }
 

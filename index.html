@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>InHouseUse1</title>
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Reem+Kufi">
   <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/font-awesome.min.css">
@@ -13,8 +12,8 @@
   <header>
     <div class="container">
       <nav>
-        <ul class="headerNav">
-          <li><a class="headerNav__anchor" href="./" target="_blank"><span class="headerNav__image"> </span><span class="headerNav__logo">InHouseUse</span></a></li>
+        <ul class="headerNav" id="js_headerNav">
+          <li><a class="headerNav__anchor" href="./" target="_blank"><span class="headerNav__image" id="js_headerNav__image"></span><span class="headerNav__logo">InHouseUse</span></a></li>
           <li><a class="headerNav__anchor--link" href="./" target="_blank"><i class="fa fa-home"> Home</i></a></li>
           <li><a class="headerNav__anchor--link" href="https://github.com/inhouseuse" target="_blank"><i class="fa fa-github"> Github</i></a></li>
           <li><a class="headerNav__anchor--link" href="https://speakerdeck.com/undefined_name" target="_blank"><i class="fa fa-slideshare"> SpeakerDeck</i></a></li>
@@ -34,16 +33,24 @@
     <div class="container">
       <section class="logos">
         <div class="logo" id="js_fade_in_up">
-          <div class="logo__image"> </div>
+          <div class="logo__image"></div>
           <div class="logo__title">InHouseUse</div>
         </div>
         <div class="logo__sub-title" id="js_fade_in">社内勉強会用のポータルサイト</div>
       </section>
     </div>
   </section>
-  <section class="page js_page" id="js_second-page">
+  <section class="page second-page js_page" id="js_second-page">
     <div class="container">
-      <div class="box"></div>
+      <h2 class="page-title">Archives</h2>
+      <article class="article">
+        <div class="article__image"></div>
+        <div class="article__desc">
+          <h3 class="article__desc__title">忙しい人のためのHTML5入門入門</h3>
+          <p class="article__desc__date">2016-11-30 </p>
+          <p class="article__desc__summary">HTML5とは何か？HTML5でできることとは?またHTML5の勉強方法に関しての説明。</p>
+        </div>
+      </article>
     </div>
   </section>
   <script src="app/assets/javascript/application.js"></script>

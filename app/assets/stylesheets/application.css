@@ -114,7 +114,8 @@ header {
 }
 
 a {
-    text-decoration: none; 
+    cursor: pointer; 
+    text-decoration: none;
 
     color: #000000;
 }
@@ -146,6 +147,27 @@ a {
         transform: scale(1) rotate(180deg);
 
         background-color: #FFFF00;
+    }
+}
+
+.color_black {
+    animation-name: color_black;
+    animation-duration: 1s;
+    animation-play-state: running; 
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+
+    animation-fill-mode: forwards;
+}
+
+@keyframes color_black {
+    0% {
+        color: #FFFFFF;
+    }
+    100% {
+        color: #4B4B4B;
     }
 }
 
@@ -216,6 +238,29 @@ a {
     }
 }
 
+.article {
+    display: flex;
+
+    cursor: pointer; 
+
+    justify-content: center;
+}
+
+.article__image {
+    width: 120px;
+
+    background: url("../images/cap20161130.png") no-repeat top left;
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.article__desc {
+    padding: 10px;
+
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
 .headerNav {
     display: flex;
 
@@ -238,7 +283,6 @@ a {
 
     text-align: center;
 
-    color: #FFFFFF;
     color: #FFFFFF;
 }
 
@@ -276,6 +320,16 @@ a {
     height: 22px;
 
     background: url("../images/logo_w.png") no-repeat bottom left;
+    background-size: cover;
+}
+
+.headerNav__image--black {
+    display: inline-block;
+
+    width: 22px;
+    height: 22px;
+
+    background: url("../images/logo.png") no-repeat bottom left;
     background-size: cover;
 }
 
@@ -338,8 +392,6 @@ a {
 
     width: 100%; 
 
-    cursor: pointer;
-
     color: #F6F6F6;
 }
 
@@ -349,6 +401,10 @@ a {
     opacity: 0; 
 
     justify-content: center;
+}
+
+.nav__down > li {
+    cursor: pointer;
 }
 
 .top-page {
@@ -377,4 +433,17 @@ a {
 
 .page {
     width: 100%;
+}
+
+.second-page {
+    background-color: #EEF1F5;
+}
+
+.page-title {
+    font-size: 30px;
+
+    padding: 10px;
+    padding-top: 75px;
+
+    text-align: center;
 }

@@ -1,0 +1,19 @@
+.color_black {
+    animation-name: color_black;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes color_black {
+    0% {
+        color:#ffffff;
+    }
+    100% {
+        color:#4B4B4B;
+    }
+}

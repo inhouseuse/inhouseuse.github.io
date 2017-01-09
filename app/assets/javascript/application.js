@@ -13,16 +13,41 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //   alert('aaa');
 // });
 
+// 対象のオブジェクトが２ペー目に入ればcolor_blackクラスを追加し、
+// そうでなければ削除する
+var checkSecondPageArea = function checkSecondPageArea(obj) {
+  if ((0, _jquery2.default)(obj).offset().top > (0, _jquery2.default)('#js_second-page').offset().top) {
+    (0, _jquery2.default)(obj).addClass('color_black');
+  } else {
+    (0, _jquery2.default)(obj).removeClass('color_black');
+  }
+};
+
+var checkSecondPageAreaImage = function checkSecondPageAreaImage(obj) {
+  if ((0, _jquery2.default)(obj).offset().top > (0, _jquery2.default)('#js_second-page').offset().top) {
+    (0, _jquery2.default)(obj).removeClass('headerNav__image');
+    (0, _jquery2.default)(obj).addClass('headerNav__image--black');
+  } else {
+    (0, _jquery2.default)(obj).addClass('headerNav__image');
+    (0, _jquery2.default)(obj).removeClass('headerNav__image--black');
+  }
+};
+
+var changeColor = function changeColor() {
+  checkSecondPageArea('#js_nav > li');
+  checkSecondPageArea('#js_headerNav > li a');
+  checkSecondPageAreaImage('#js_headerNav__image');
+};
+
 document.addEventListener('DOMContentLoaded', function () {
   // 初期表示設定
   (0, _jquery2.default)('.js_page').height(window.innerHeight); // トップページの高さをウィンドウのインナーの高さまで拡大
   (0, _jquery2.default)('#js_fade_in_up').addClass('fade_in_up');
   (0, _jquery2.default)('#js_fade_in').addClass('fade_in');
-  // $('#js_nav').addClass('fade_in');
   (0, _jquery2.default)('#js_nav').addClass('flash');
 
-  // for(let key in initialDisplayObj) {
-  // }
+  // ヘッダーとナビゲーションの色を変える
+  window.addEventListener('scroll', changeColor, false);
 }, false);
 
 (0, _jquery2.default)('#js_nav').click(function () {
@@ -30,16 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollTop: (0, _jquery2.default)('#js_second-page').offset().top
   });
 });
-
-// let initialDisplayObj = {
-//   fade_in_up: 'js_logo',
-//   fade_in: 'js_nav',
-//   flash: 'js_na',
-// };
-
-// let addClassObj = ($obj, className) => {
-//   $obj.addClass(className);
-// };
 
 },{"jquery":2}],2:[function(require,module,exports){
 /*!
