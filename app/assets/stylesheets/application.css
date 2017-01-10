@@ -241,12 +241,14 @@ a {
 .article {
     display: flex;
 
-    cursor: pointer; 
+    margin-bottom: 10px; 
+
+    cursor: pointer;
 
     justify-content: center;
 }
 
-.article__image {
+.article__image_20161130 {
     width: 120px;
 
     background: url("../images/cap20161130.png") no-repeat top left;
@@ -254,7 +256,24 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
+.article__image_20161207 {
+    width: 120px;
+
+    background: url("../images/cap20161207.png") no-repeat top left;
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.article__image_20161214 {
+    width: 120px;
+
+    background: url("../images/cap20161214.png") no-repeat top left;
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
 .article__desc {
+    width: 650px;
     padding: 10px;
 
     background-color: #FFFFFF;
