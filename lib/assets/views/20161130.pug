@@ -1,0 +1,18 @@
+doctype html
+html(lang="ja")
+include common/_html_head.pug
+body
+    include common/_header_black.pug
+    section.archivepage.js_page
+        .container
+            h2.page-title 2016-11-30 Contents
+            //- h3.archive__link
+            //-     a.archive__anchor(href="https://github.com/inhouseuse/frontend_dev", target="_blank")
+            //-         i.fa.fa-github-alt(aria-hidden="true")  Github
+            h3.archive__link
+                a.archive__anchor(href="https://speakerdeck.com/undefined_name/mang-siiren-falsetamefalsehtml5ru-men-ru-men?slide=1", target="_blank")
+                    i.fa.fa-external-link(aria-hidden="true")  Slide
+            .slide
+                script(async class="speakerdeck-embed" data-slide="1" data-id="1b1bd0a37d3748598907123081edbc85" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js")
+
+    include common/_javascript.pug
