@@ -4,6 +4,10 @@ module.exports = {
         "window": true,
         "document": true
     },
+    "linebreak-style": [
+      2,
+      ""
+    ],
     "plugins": [
         "import"
     ]
