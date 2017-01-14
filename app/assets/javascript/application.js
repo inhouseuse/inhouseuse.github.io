@@ -5,11 +5,10 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _data = require('./lib/data');
-
-var _data2 = _interopRequireDefault(_data);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import Util from './lib/util';
+// import ArticleData from './lib/data';
 
 // 対象のオブジェクトが２ペー目に入ればcolor_blackクラスを追加し、
 // そうでなければ削除する
@@ -20,8 +19,6 @@ var checkSecondPageArea = function checkSecondPageArea(obj) {
     (0, _jquery2.default)(obj).removeClass('color_black');
   }
 };
-// import Util from './lib/util';
-
 
 var checkSecondPageAreaImage = function checkSecondPageAreaImage(obj) {
   if ((0, _jquery2.default)(obj).offset().top > (0, _jquery2.default)('#js_second-page').offset().top) {
@@ -56,42 +53,38 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-var app1 = new Vue({
-  el: '#app_article'
+// const articles = [
+//   {
+//     date: '20161130',
+//     url: './20161130.html',
+//     article__desc__title: 'app/assets/images/cap20161130.png',
+//     article__desc__date: '忙しい人のためのフロントエンド開発環境ラインナップ',
+//     article__desc__summary: 'フロントエンド開発環境の定番に関して実例とセットで解説',
+//   },
+// ];
 
-});
+// '20161207',
+// '20161214',
+// '20160111',
 
-},{"./lib/data":2,"jquery":3}],2:[function(require,module,exports){
-"use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+// const appArticle = new Vue({
+//   el: '#app_article',
+//   data: {
+//     articles: [
+//       {
+//         date: '20170111',
+//         url: './20170111.html',
+//         imageUrl: 'app/assets/images/cap20170111.png',
+//         article__desc__title: '忙しい人のためのフロントエンド開発環境ラインナップ',
+//         article__desc__date: '2017-01-11',
+//         article__desc__summary: 'フロントエンド開発環境の定番に関して実例とセットで解説',
+//       },
+//     ],
+//   },
+// });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var articleData = [20161130, 20161207, 20161214, 20160111];
-
-var Data = function () {
-  function Data() {
-    _classCallCheck(this, Data);
-  }
-
-  _createClass(Data, null, [{
-    key: "data",
-    value: function data() {
-      return articleData;
-    }
-  }]);
-
-  return Data;
-}();
-
-exports.default = Data;
-
-},{}],3:[function(require,module,exports){
+},{"jquery":2}],2:[function(require,module,exports){
 /*!
  * jQuery JavaScript Library v3.1.1
  * https://jquery.com/

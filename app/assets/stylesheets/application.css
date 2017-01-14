@@ -278,10 +278,18 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
-.article__image_20160111 {
+.article__image_20170111 {
     width: 125px;
 
     background: url("../images/cap20170111.png") no-repeat top left;
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+
+.article__image_20170118 {
+    width: 125px;
+
+    background: url("../images/cap20170118.png") no-repeat top left;
     background-size: cover;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
