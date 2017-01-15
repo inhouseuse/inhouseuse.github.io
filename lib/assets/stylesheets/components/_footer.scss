@@ -1,0 +1,30 @@
+.footer {
+    width: 100%;
+    background: #4B4B4B;
+    color: #ffffff;
+}
+
+.footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // height: 30px;
+}
+
+.footer-links {
+    list-style-type: none;
+}
+
+.footer-item {
+    display: inline-block;
+    // margin: 10px;
+}
+
+.footer__links-trigger {
+    color: #ffffff;
+}
+
+.footer__copyright {
+    font-size: 0.8em;
+    line-height: 1.5;
+}

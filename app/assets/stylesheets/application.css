@@ -302,6 +302,37 @@ a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
+.footer {
+    width: 100%;
+
+    color: #FFFFFF; 
+    background: #4B4B4B;
+}
+
+.footer-main {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-links {
+    list-style-type: none;
+}
+
+.footer-item {
+    display: inline-block;
+}
+
+.footer__links-trigger {
+    color: #FFFFFF;
+}
+
+.footer__copyright {
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
 .headerNav {
     display: flex;
 
