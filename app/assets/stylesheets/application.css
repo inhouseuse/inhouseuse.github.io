@@ -238,6 +238,27 @@ a {
     }
 }
 
+.spin {
+    animation-name: spin;
+    animation-duration: 1.2s;
+    animation-play-state: running; 
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+
+    animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .archive__anchor {
     font-size: 20px;
 
@@ -416,6 +437,27 @@ a {
     display: inline-block;
 
     margin-left: 2px;
+}
+
+.load {
+    display: flex;
+
+    width: 100%;
+    margin: 0 auto;
+
+    background: #F5B6B0; 
+
+    align-items: center;
+    justify-content: center;
+}
+
+.loading {
+    width: 60px;
+    height: 60px;
+
+    border: 5px solid rgba(255, 255, 255, 0.4);
+    border-top-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
 }
 
 .logos {

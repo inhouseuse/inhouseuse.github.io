@@ -1,0 +1,17 @@
+.load {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    background: #F5B6B0;
+}
+
+.loading {
+    width: 60px;
+    height: 60px;
+    // background: #000;
+	border: 5px solid rgba(255,255,255,0.4);
+	border-top-color: rgba(255,255,255,0.9);
+	border-radius: 50%;
+}
