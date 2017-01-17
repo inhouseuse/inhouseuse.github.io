@@ -218,7 +218,7 @@ a {
 }
 
 .fade_out {
-    animation-name: fadeIn;
+    animation-name: fadeOut;
     animation-duration: 1s;
     animation-play-state: running; 
     animation-timing-function: ease;
@@ -229,7 +229,7 @@ a {
     animation-fill-mode: forwards;
 }
 
-@keyframes fadeIn {
+@keyframes fadeOut {
     0% {
         opacity: 1;
     }
@@ -462,7 +462,7 @@ a {
 
 .loading-page {
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     top: 0;
     left: 0;
 
@@ -470,7 +470,7 @@ a {
 
     width: 100%;
 
-    background: black;
+    background: #E0F3FF;
 }
 
 .loading {
@@ -483,11 +483,11 @@ a {
 }
 
 .loading__icon {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
 
-    border: 5px solid rgba(255, 255, 255, 0.4);
-    border-top-color: white;
+    border: 10px solid #F3F3F3;
+    border-top-color: #7DD9B9;
     border-radius: 50%;
 }
 

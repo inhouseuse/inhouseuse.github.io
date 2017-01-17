@@ -1,5 +1,5 @@
 .fade_out {
-    animation-name: fadeIn;
+    animation-name: fadeOut;
     animation-duration: 1s;
     animation-timing-function: ease;
     animation-delay: 0s;
@@ -9,11 +9,11 @@
     animation-play-state: running;
 }
 
-@keyframes fadeIn {
+@keyframes fadeOut {
     0% {
-        opacity: 1
+        opacity: 1;
     }
     100% {
-        opacity: 0
+        opacity: 0;
     }
 }
