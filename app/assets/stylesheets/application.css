@@ -218,7 +218,7 @@ a {
 }
 
 .fade_out {
-    animation-name: fadeIn;
+    animation-name: fadeOut;
     animation-duration: 1s;
     animation-play-state: running; 
     animation-timing-function: ease;
@@ -229,7 +229,7 @@ a {
     animation-fill-mode: forwards;
 }
 
-@keyframes fadeIn {
+@keyframes fadeOut {
     0% {
         opacity: 1;
     }
@@ -462,7 +462,7 @@ a {
 
 .loading-page {
     position: fixed;
-    z-index: 2;
+    z-index: 1;
     top: 0;
     left: 0;
 
