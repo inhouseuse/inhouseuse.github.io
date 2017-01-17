@@ -5,58 +5,60 @@ body
     include common/_load.pug
     include common/_header.pug
     include common/_nav.pug
-    section#js_top-page.top-page.js_page
-        .container
-            section.logos
-                .logo#js_fade_in_up
-                    .logo__image
-                    .logo__title InHouseUse
-                .logo__sub-title#js_fade_in 社内勉強会用のポータルサイト
+    section.main_contents#js_main_contents
+
+        section#js_top-page.top-page.js_page
+            .container
+                section.logos
+                    .logo#js_fade_in_up
+                        .logo__image
+                        .logo__title InHouseUse
+                    .logo__sub-title#js_fade_in 社内勉強会用のポータルサイト
+                    
+        section#js_second-page.page.second-page.js_page
+            .container
+
+                h2.page-title Archives
                 
-    section#js_second-page.page.second-page.js_page
-        .container
+                a(href="./20170118.html", target="_blank")
+                    article.article
+                        .article__image_20170118
+                        .article__desc
+                            h3.article__desc__title JavaScript 2016 with ES6
+                            p.article__desc__date 2017-01-18
+                            p.article__desc__summary Javascriptの標準仕様 EcmaScript2016についての紹介
 
-            h2.page-title Archives
-            
-            a(href="./20170118.html", target="_blank")
-                article.article
-                    .article__image_20170118
-                    .article__desc
-                        h3.article__desc__title JavaScript 2016 with ES6
-                        p.article__desc__date 2017-01-18
-                        p.article__desc__summary Javascriptの標準仕様 EcmaScript2016についての紹介
+                a(href="./20170111.html", target="_blank")
+                    article.article
+                        .article__image_20170111
+                        .article__desc
+                            h3.article__desc__title 忙しい人のためのフロントエンド開発環境ラインナップ
+                            p.article__desc__date 2017-01-11
+                            p.article__desc__summary フロントエンド開発環境の定番に関して実例とセットで解説
 
-            a(href="./20170111.html", target="_blank")
-                article.article
-                    .article__image_20170111
-                    .article__desc
-                        h3.article__desc__title 忙しい人のためのフロントエンド開発環境ラインナップ
-                        p.article__desc__date 2017-01-11
-                        p.article__desc__summary フロントエンド開発環境の定番に関して実例とセットで解説
+                a(href="./20161214.html", target="_blank")
+                    article.article
+                        .article__image_20161214
+                        .article__desc
+                            h3.article__desc__title jQueryを使ってみよう②
+                            p.article__desc__date 2016-12-14
+                            p.article__desc__summary jQueryの使い方を実例を使って説明。Ajaxのとは何か？という内容についても解説
 
-            a(href="./20161214.html", target="_blank")
-                article.article
-                    .article__image_20161214
-                    .article__desc
-                        h3.article__desc__title jQueryを使ってみよう②
-                        p.article__desc__date 2016-12-14
-                        p.article__desc__summary jQueryの使い方を実例を使って説明。Ajaxのとは何か？という内容についても解説
+                a(href="./20161207.html", target="_blank")
+                    article.article
+                        .article__image_20161207
+                        .article__desc
+                            h3.article__desc__title jQueryを使ってみよう①
+                            p.article__desc__date 2016-12-07 
+                            p.article__desc__summary jQueryの使い方を基本から説明
 
-            a(href="./20161207.html", target="_blank")
-                article.article
-                    .article__image_20161207
-                    .article__desc
-                        h3.article__desc__title jQueryを使ってみよう①
-                        p.article__desc__date 2016-12-07 
-                        p.article__desc__summary jQueryの使い方を基本から説明
-
-            a(href="./20161130.html", target="_blank")
-                article.article
-                    .article__image_20161130
-                    .article__desc
-                        h3.article__desc__title 忙しい人のためのHTML5入門入門
-                        p.article__desc__date 2016-11-30 
-                        p.article__desc__summary HTML5とは何か？HTML5でできることとは?またHTML5の勉強方法に関しての説明
+                a(href="./20161130.html", target="_blank")
+                    article.article
+                        .article__image_20161130
+                        .article__desc
+                            h3.article__desc__title 忙しい人のためのHTML5入門入門
+                            p.article__desc__date 2016-11-30 
+                            p.article__desc__summary HTML5とは何か？HTML5でできることとは?またHTML5の勉強方法に関しての説明
 
 
     include common/_footer.pug

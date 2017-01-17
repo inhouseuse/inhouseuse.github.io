@@ -43,6 +43,7 @@ var showLoadingPage = function showLoadingPage() {
 
 var pageInit = function pageInit() {
   // 初期表示設定
+  (0, _jquery2.default)('#js_main_contents').css('display', 'block');
   (0, _jquery2.default)('.js_page').height(window.innerHeight); // トップページの高さをウィンドウのインナーの高さまで拡大
   (0, _jquery2.default)('#js_fade_in_up').addClass('fade_in_up');
   (0, _jquery2.default)('#js_fade_in').addClass('fade_in');
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // 画像の読み込みが終わったら実行する
 (0, _jquery2.default)(window).on('load', function () {
   pageInit();
-  // $('#js-load').css('display', 'none');
+  (0, _jquery2.default)('#js-load').addClass('fade_out');
 });
 
 (0, _jquery2.default)('#js_nav').click(function () {
