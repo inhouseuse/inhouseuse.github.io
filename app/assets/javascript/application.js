@@ -60,7 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
 // 画像の読み込みが終わったら実行する
 (0, _jquery2.default)(window).on('load', function () {
   pageInit();
+  // $.when($('#js-load').addClass('fade_out')).done($('#js-load').remove());
   (0, _jquery2.default)('#js-load').addClass('fade_out');
+  (0, _jquery2.default)('#js-load').on('animationend', function () {
+    (0, _jquery2.default)('#js-load').remove();
+  });
 });
 
 (0, _jquery2.default)('#js_nav').click(function () {

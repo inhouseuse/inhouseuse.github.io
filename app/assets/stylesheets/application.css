@@ -219,7 +219,7 @@ a {
 
 .fade_out {
     animation-name: fadeOut;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-play-state: running; 
     animation-timing-function: ease;
     animation-delay: 0s;
