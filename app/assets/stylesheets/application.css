@@ -470,7 +470,7 @@ a {
 
     width: 100%;
 
-    background: #E0F3FF;
+    background: black;
 }
 
 .loading {
@@ -483,11 +483,11 @@ a {
 }
 
 .loading__icon {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 
-    border: 10px solid #F3F3F3;
-    border-top-color: #7DD9B9;
+    border: 5px solid rgba(255, 255, 255, 0.4);
+    border-top-color: white;
     border-radius: 50%;
 }
 
