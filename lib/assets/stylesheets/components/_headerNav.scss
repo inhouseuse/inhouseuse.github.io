@@ -88,7 +88,7 @@
 
 .headerNav--mobile__anchor {
     // スマホの画面より大きい場合出力しない
-    @include min-screen($breakpoint-mobile -1) {
+    @include min-screen($breakpoint-mobile) {
         display: none;
     }
     display: block;

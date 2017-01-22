@@ -38,7 +38,7 @@ var changeColor = function changeColor() {
 
 // ローディングページをウィンドウのインナーの高さまで拡大
 var showLoadingPage = function showLoadingPage() {
-  (0, _jquery2.default)('#js-load').height(window.innerHeight);
+  (0, _jquery2.default)('#js-load').css('min-height', window.innerHeight);
 };
 
 var pageInit = function pageInit() {

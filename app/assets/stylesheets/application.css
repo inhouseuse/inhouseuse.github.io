@@ -300,8 +300,8 @@ a {
 
 .article__image_20161130, .article__image_20161207, .article__image_20161214, .article__image_20170111, .article__image_20170118 {
     width: 125px;
+    height: 100px;
 
-    background-size: cover;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 @media screen and (max-width: 767px) {
@@ -312,34 +312,39 @@ a {
 
 .article__image_20161130 {
     background: url("../images/cap20161130.png") no-repeat top left;
+    background-size: cover;
 }
 
 .article__image_20161207 {
     background: url("../images/cap20161207.png") no-repeat top left;
+    background-size: cover;
 }
 
 .article__image_20161214 {
     background: url("../images/cap20161214.png") no-repeat top left;
+    background-size: cover;
 }
 
 .article__image_20170111 {
     background: url("../images/cap20170111.png") no-repeat top left;
+    background-size: cover;
 }
 
 .article__image_20170118 {
     background: url("../images/cap20170118.png") no-repeat top left;
+    background-size: cover;
 }
 
 .article__desc {
+    width: 70%;
     padding: 10px;
+
+    background: #FFFFFF; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 @media screen and (max-width: 767px) {
     .article__desc {
         font-size: 12px;
-
-        border: 1px solid #000000;
-        border-radius: 5px;
-        background: #FFFFFF;
     }
 }
 
@@ -486,7 +491,7 @@ a {
     border: 1px solid #FFFFFF;
     border-radius: 5px;
 }
-@media screen and (min-width: 767px -1) {
+@media screen and (min-width: 767px) {
     .headerNav--mobile__anchor {
         display: none;
     }
