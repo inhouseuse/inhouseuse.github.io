@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>InHouseUse1</title>
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Reem+Kufi">
   <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/font-awesome.min.css">
@@ -23,6 +24,7 @@
           <li><a class="headerNav__anchor--link" href="https://github.com/inhouseuse" target="_blank"><i class="fa fa-github"> Github</i></a></li>
           <li><a class="headerNav__anchor--link" href="https://speakerdeck.com/undefined_name" target="_blank"><i class="fa fa-slideshare"> SpeakerDeck</i></a></li>
           <li><a class="headerNav__anchor--link" href="https://github.com/inhouseuse" target="_blank"><i class="fa fa-envelope-o"> Contact</i></a></li>
+          <li><a class="headerNav--mobile__anchor js_toggleModalLink"><i class="fa fa-bars"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -54,7 +56,7 @@
             <div class="article__desc">
               <h3 class="article__desc__title">JavaScript 2016 with ES6</h3>
               <p class="article__desc__date">2017-01-18</p>
-              <p class="article__desc__summary">Javascriptの標準仕様 EcmaScript2016についての紹介</p>
+              <p class="article__desc__summary">Javascriptの標準仕様 EcmaScript2016についての紹介。</p>
             </div>
           </article></a><a href="./20170111.html" target="_blank">
           <article class="article">
@@ -74,11 +76,11 @@
             </div>
           </article></a><a href="./20161207.html" target="_blank">
           <article class="article">
-            <div class="article__image_20161207"></div>
+            <div class="article__image_20161130"></div>
             <div class="article__desc">
               <h3 class="article__desc__title">jQueryを使ってみよう①</h3>
               <p class="article__desc__date">2016-12-07 </p>
-              <p class="article__desc__summary">jQueryの使い方を基本から説明</p>
+              <p class="article__desc__summary">jQueryの使い方を基本から説明。ID/Classセレクタの使い方や導入手順を説明</p>
             </div>
           </article></a><a href="./20161130.html" target="_blank">
           <article class="article">
@@ -91,6 +93,15 @@
           </article></a>
       </div>
     </section>
+  </section>
+  <section class="modallink display_none" id="js-modallink">
+    <ul class="modallink-list">
+      <li><a class="modallink__anchor" href="./" target="_blank"><i class="fa fa-home"> Home</i></a></li>
+      <li><a class="modallink__anchor" href="https://github.com/inhouseuse" target="_blank"><i class="fa fa-github"> Github</i></a></li>
+      <li><a class="modallink__anchor" href="https://speakerdeck.com/undefined_name" target="_blank"><i class="fa fa-slideshare"> SpeakerDeck</i></a></li>
+      <li><a class="modallink__anchor" href="https://github.com/inhouseuse" target="_blank"><i class="fa fa-envelope-o"> Contact</i></a></li>
+      <li><a class="modallink__anchor js_toggleModalLink"><i class="fa fa-times"></i></a></li>
+    </ul>
   </section>
   <footer>
     <div class="footer">

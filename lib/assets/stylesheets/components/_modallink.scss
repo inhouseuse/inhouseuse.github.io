@@ -1,0 +1,37 @@
+.modallink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+
+}
+.modallink-list {
+    list-style: none;
+    li:last-child {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+.display_none {
+    display: none;
+}
+
+
+.modallink__anchor {
+    color: #ffffff;
+    line-height: 1.5;
+    font-size: 30px;
+    padding: 10px;
+    margin: 20px; 
+    cursor: pointer;
+    :hover {
+        opacity: 0.5;
+    }
+}
+
+

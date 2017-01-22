@@ -73,6 +73,10 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+(0, _jquery2.default)('.js_toggleModalLink').click(function () {
+  (0, _jquery2.default)('#js-modallink').toggleClass('display_none').height(window.innerHeight);
+});
+
 // const articles = [
 //   {
 //     date: '20161130',
