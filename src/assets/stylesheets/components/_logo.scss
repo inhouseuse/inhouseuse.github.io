@@ -1,0 +1,44 @@
+.logo-main {
+    opacity: 0;
+}
+
+.logo-main__image {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    background: url($image_path + "/logo_w.png") no-repeat top left;
+    background-size: cover;
+    // スマホのスクリーンではフォントサイズを小さくする
+    @include max-screen($breakpoint-mobile) {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.logo-main__title {
+    color: #ffffff;
+    font-size: 80px;
+     // スマホのスクリーンではフォントサイズを小さくする
+    @include max-screen($breakpoint-mobile) {
+        font-size: 40px;                 
+    }
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+.logo-sub__title {
+    opacity: 0;
+    color: #ffffff;    
+    font-size: 30px;
+    @include max-screen($breakpoint-mobile) {
+        font-size: 20px;                 
+    }
+}
+.logo-sub__arrow {
+    cursor: pointer;
+    opacity: 0;
+    color: #ffffff;    
+    font-size: 30px;
+    @include max-screen($breakpoint-mobile) {
+        font-size: 20px;                 
+    }
+}

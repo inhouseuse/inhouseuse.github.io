@@ -1,6 +1,3 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-'use strict';
-
 // import $ from 'jquery';
 
 // // 対象のオブジェクトが２ペー目に入ればcolor_blackクラスを追加し、
@@ -72,26 +69,24 @@
 
 
 // 初期処理
-$(function () {
+$(() => {
   // landingpageやloadの高さをwindowのインナーの高さまで上げる
   $('.js-resize').height(window.innerHeight);
   // navをクリックしたあと
-  $('#js_nav').click(function () {
+  $('#js_nav').click(() => {
     $('html,body').animate({
-      scrollTop: $('#js_second-page').offset().top
+      scrollTop: $('#js_second-page').offset().top,
     });
   });
   // mordalリンククリック時に
-  $('.js_toggleModalLink').click(function () {
+  $('.js_toggleModalLink').click(() => {
     $('#js-modallink').toggleClass('display_none').height(window.innerHeight);
   });
 });
 
-$(window).load(function () {
+$(window).load(() => {
   $('.js-fadeout').addClass('fade_out');
-  $('.js-fadeout').on('animationend', function () {
+  $('.js-fadeout').on('animationend', () => {
     $('.js-fadeout').remove();
   });
 });
-
-},{}]},{},[1]);

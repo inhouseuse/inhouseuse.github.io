@@ -1,0 +1,30 @@
+.modallink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+
+}
+.modallink-list {
+    list-style: none;
+    li:last-child {
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+.modallink-list li {
+    margin: 28px 10px;
+}
+.modallink-list a {
+    color: #ffffff;
+    font-size: 20px;
+}
+.display_none {
+    display: none;
+}
+

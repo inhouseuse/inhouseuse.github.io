@@ -1,0 +1,18 @@
+section.modallink.display_none#js-modallink
+    ul.modallink-list
+        li: a(href="./")
+            i.small.material-icons.left home
+            span Home
+        li: a(href="https://github.com/inhouseuse")
+            i.small.material-icons.left code
+            span Github
+        li: a(href="https://speakerdeck.com/undefined_name")
+            i.small.material-icons.left slideshow
+            span SpeakerDeck
+        li: a(href="https://github.com/codefont")
+            i.small.material-icons.left mail_outline
+            span Contact
+        //- li: a.modallink__anchor(href="https://github.com/inhouseuse", target="_blank"): i.fa.fa-github  Github
+        //- li: a.modallink__anchor(href="https://speakerdeck.com/undefined_name", target="_blank"): i.fa.fa-slideshare  SpeakerDeck
+        //- li: a.modallink__anchor(href="https://github.com/inhouseuse", target="_blank"): i.fa.fa-envelope-o  Contact
+        li: a.modallink__anchor.js_toggleModalLink: i.material-icons close

@@ -1,0 +1,12 @@
+// 外部ライブラリのCSS
+// @import 'reset';
+// @import 'bootstrap';
+
+// ベースのCSS
+@import 'base';
+
+// パーツ毎のCSS
+@import 'lib/*';
+@import 'animation/*';
+@import 'layouts/*';
+@import 'components/*';

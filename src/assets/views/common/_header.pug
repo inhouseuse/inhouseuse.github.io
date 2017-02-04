@@ -1,0 +1,26 @@
+header
+    div.navbar-fixed
+        nav.transparent.header-nav
+            div.nav-wrapper
+                div.container
+                    a.brand-logo(href="#")
+                        span.header__logo-image
+                        span.header__logo-title InHouseUse
+                    a.button-collapse.js_toggleModalLink(data-activates="mobile-demo")
+                        i.material-icons menu
+                    ul.right.hide-on-med-and-down
+                        li: a(href="./")
+                            i.material-icons.left home
+                            span Home
+                        li: a(href="./")
+                            i.material-icons.left code
+                            span Github
+                        li: a(href="./")
+                            i.material-icons.left slideshow
+                            span SpeakerDeck
+                        li: a(href="./")
+                            i.material-icons.left mail_outline
+                            span Contact
+
+                    //- スマホ用のヘッダー
+                    //- li: a.headerNav--mobile__anchor.js_toggleModalLink: i.fa.fa-bars

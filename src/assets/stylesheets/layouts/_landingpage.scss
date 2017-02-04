@@ -1,0 +1,6 @@
+.landingpage {
+    min-height: 800px;
+    opacity: 0.5;
+    background: linear-gradient(-45deg, rgba(246, 255, 0, .9), rgba(255, 0, 161, .9)), url($image_path + "/bg.jpg");
+    background-size: cover;
+}
