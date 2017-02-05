@@ -11,11 +11,6 @@
     <title>InHouseUse</title>
   </head>
   <body>
-    <section class="loading-page js-resize js-fadeout">
-      <div class="loading">
-        <div class="loading__icon spin"></div>
-      </div>
-    </section>
     <div class="landingpage js-resize">
       <header>
         <nav class="transparent header-nav">
@@ -52,30 +47,40 @@
             <h4>Archives</h4>
           </li>
           <template v-if="cardView">
-            <li v-on:click="toggleVue"><i class="material-icons">view_list</i></li>
+            <li v-on:click="toggleVue"><i class="material-icons teal-text lighten-2">view_list</i></li>
           </template>
           <template v-else>
-            <li v-on:click="toggleVue"><i class="material-icons">view_module</i></li>
+            <li v-on:click="toggleVue"><i class="material-icons teal-text lighten-2">view_module</i></li>
           </template>
         </ul>
         <div class="row">
           <template v-if="cardView">
             <template v-for="item in archives">
-              <div class="col s12 m6 l3">
+              <div class="col s12 m6 l4">
                 <div class="card hoverable">
                   <div class="card-image"><img v-bind:src="'app/assets/images/' + item.image"><a class="btn-floating halfway-fab btn-large waves-effect waves-light red" v-bind:href="item.url" target="_blank"><i class="material-icons">link</i></a></div>
                   <div class="card-content">
-                    <p>{{ item.date }}</p>
-                    <p>{{ item.comment }}</p>
+                    <p class="teal-text lighten-2">{{ item.date }}</p>
+                    <p>{{ item.title }}</p>
                   </div>
                 </div>
               </div>
             </template>
           </template>
           <template v-if="!cardView">
-            <ul class="collection">
+            <ul class="archive-list">
               <template v-for="item in archives">
-                <li class="collection-item avatar"> <img class="circle" v-bind:src="'app/assets/images/' + item.image" v-bind:alt="item.date + 'image'"></li>
+                <div class="row">
+                  <div class="col s12">
+                    <li class="archive-list__item"><img v-bind:src="'app/assets/images/' + item.image" v-bind:alt="item.date + 'image'">
+                      <div class="archive-list__item__contents">
+                        <p class="archive-title">{{ item.title }}</p>
+                        <p class="grey-text lighten-4">{{ item.comment }}</p>
+                        <p class="teal-text lighten-2">{{ item.date }}</p>
+                      </div><a class="archive-list__item__link btn-floating waves-effect waves-light red right" v-bind:href="item.url" target="_blank"><i class="material-icons">link</i></a>
+                    </li>
+                  </div>
+                </div>
               </template>
             </ul>
           </template>
@@ -91,7 +96,7 @@
         <li><a class="modallink__anchor js_toggleModalLink"><i class="material-icons">close</i></a></li>
       </ul>
     </section>
-    <footer class="page-footer">
+    <footer class="page-footer teal lighten-2">
       <div class="row">
         <div class="col s12">
           <div class="center-align">© 2016-2017 inHouseUse,All right reserved.</div>

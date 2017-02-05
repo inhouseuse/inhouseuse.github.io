@@ -4,25 +4,38 @@
         ul.archive-title
             li: h4 Archives
             template(v-if="cardView")
-                li(v-on:click="toggleVue"): i.material-icons view_list
+                li(v-on:click="toggleVue"): i.material-icons.teal-text.lighten-2 view_list
             template(v-else)
-                li(v-on:click="toggleVue"): i.material-icons view_module
+                li(v-on:click="toggleVue"): i.material-icons.teal-text.lighten-2 view_module
         .row
             template(v-if="cardView")
                 template(v-for="item in archives")
-                    .col.s12.m6.l3
+                    .col.s12.m6.l4
                         .card.hoverable
                             .card-image
                                 img(v-bind:src="'app/assets/images/' + item.image")
                                 //- span.card-title {{ item.date }}
                                 a(v-bind:href="item.url" target="_blank").btn-floating.halfway-fab.btn-large.waves-effect.waves-light.red: i.material-icons link
                             .card-content
-                                p {{ item.date }}
-                                p {{ item.comment }}
+                                p.teal-text.lighten-2 {{ item.date }}
+                                p {{ item.title }}
+                                //- p {{ item.comment }}
             template(v-if="!cardView")
-                ul.collection
+                //- ul.collection
+                //-     template(v-for="item in archives")
+                //-         li.collection-item
+                //-             img(v-bind:src="'app/assets/images/' + item.image" v-bind:alt="item.date + 'image'")
+                ul.archive-list
                     template(v-for="item in archives")
-                        li.collection-item.avatar 
-                            img.circle(v-bind:src="'app/assets/images/' + item.image" v-bind:alt="item.date + 'image'")
+                        .row
+                            .col.s12
+                                li.archive-list__item
+                                    img(v-bind:src="'app/assets/images/' + item.image" v-bind:alt="item.date + 'image'")
+                                    .archive-list__item__contents
+                                        p.archive-title {{ item.title }}
+                                        p.grey-text.lighten-4 {{ item.comment }}
+                                        p.teal-text.lighten-2 {{ item.date }}
+                                    a(v-bind:href="item.url" target="_blank").archive-list__item__link.btn-floating.waves-effect.waves-light.red.right: i.material-icons link
+
 
                         
