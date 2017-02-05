@@ -75,6 +75,7 @@
 $(function () {
   // landingpageやloadの高さをwindowのインナーの高さまで上げる
   $('.js-resize').height(window.innerHeight);
+  $('.js-resize-contents').height(window.innerHeight - $('header').height());
   // navをクリックしたあと
   $('#js_nav').click(function () {
     $('html,body').animate({
@@ -93,5 +94,28 @@ $(window).load(function () {
     $('.js-fadeout').remove();
   });
 });
+
+// Vue.component('card-item', {
+//   template: `
+//     <div>
+//     </div>
+//   `
+// });
+
+
+var archiveVueApp = new Vue({
+  el: '#archive-vueapp',
+  data: {
+    cardView: true,
+    archives: [{ title: 'JavaScript 2016 with ES6', date: '2017/01/25', image: 'cap20170118.png', comment: 'Javascriptの標準仕様 EcmaScript2016についての紹介', url: './20170118.html' }, { title: '忙しい人のためのフロントエンド開発環境ラインナップ②', date: '2017/01/18', image: 'cap20170111.png', comment: '引き続き開発環境周りの解説', url: './20170111.html' }, { title: '忙しい人のためのフロントエンド開発環境ラインナップ①', date: '2017/01/11', image: 'cap20170111.png', comment: 'フロントエンド開発環境の定番に関して実例とセットで解説', url: './20170111.html' }, { title: 'jQueryを使ってみよう②', date: '2016/12/14', image: 'cap20161214.png', comment: 'jQueryの使い方を実例を使って説明。Ajaxのとは何か？という内容についても解説', url: './20161214.html' }, { title: 'jQueryを使ってみよう①', date: '2016/12/07', image: 'cap20161207.png', comment: 'jQueryの使い方を基本から説明。ID/Classセレクタの使い方や導入手順を説明', url: './20161207.html' }, { title: '忙しい人のためのHTML5入門入門', date: '2016/11/30', image: 'cap20161130.png', comment: 'HTML5とは何か？HTML5でできることとは?またHTML5の勉強方法に関しての説明', url: './20161130.html' }]
+  },
+  methods: {
+    toggleVue: function toggleVue() {
+      this.cardView = !this.cardView;
+    }
+  }
+});
+
+// console.log(archiveVueApp.view);
 
 },{}]},{},[1]);

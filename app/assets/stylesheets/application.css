@@ -30,7 +30,6 @@ main {
     transform: translateY(0px);
   }
   100% {
-    opacity: 1;
     transform: translateY(60px);
   }
 }
@@ -166,9 +165,23 @@ main {
   background-size: cover;
 }
 
-.archive__anchor {
-  font-size: 20px;
-  color: #789EFC;
+.archive-title {
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  border-collapse: collapse;
+}
+
+.archive-title h4 {
+  margin-bottom: 0px;
+}
+
+.archive-title li:first-child {
+  margin-right: auto;
+}
+
+.archive-title i {
+  cursor: pointer;
 }
 
 .article {
@@ -255,10 +268,6 @@ main {
 .footer__copyright {
   font-size: 0.8em;
   line-height: 1.5;
-}
-
-header {
-  position: fixed;
 }
 
 .header-nav {

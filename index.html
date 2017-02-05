@@ -18,22 +18,20 @@
     </section>
     <div class="landingpage js-resize">
       <header>
-        <div class="navbar-fixed">
-          <nav class="transparent header-nav">
-            <div class="nav-wrapper">
-              <div class="container"><a class="brand-logo" href="#"><span class="header__logo-image"></span><span class="header__logo-title">InHouseUse</span></a><a class="button-collapse js_toggleModalLink" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                  <li><a href="./"><i class="material-icons left">home</i><span>Home</span></a></li>
-                  <li><a href="./"><i class="material-icons left">code</i><span>Github</span></a></li>
-                  <li><a href="./"><i class="material-icons left">slideshow</i><span>SpeakerDeck</span></a></li>
-                  <li><a href="./"><i class="material-icons left">mail_outline</i><span>Contact</span></a></li>
-                </ul>
-              </div>
+        <nav class="transparent header-nav">
+          <div class="nav-wrapper">
+            <div class="container"><a class="brand-logo" href="#"><span class="header__logo-image"></span><span class="header__logo-title">InHouseUse</span></a><a class="button-collapse js_toggleModalLink" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="./"><i class="material-icons left">home</i><span>Home</span></a></li>
+                <li><a href="./"><i class="material-icons left">code</i><span>Github</span></a></li>
+                <li><a href="./"><i class="material-icons left">slideshow</i><span>SpeakerDeck</span></a></li>
+                <li><a href="./"><i class="material-icons left">mail_outline</i><span>Contact</span></a></li>
+              </ul>
             </div>
-          </nav>
-        </div>
+          </div>
+        </nav>
       </header>
-      <container class="js-resize valign-wrapper">
+      <container class="js-resize-contents valign-wrapper">
         <div class="row">
           <div class="col s12">
             <div class="logo valign">
@@ -47,17 +45,40 @@
         </div>
       </container>
     </div>
-    <div class="pink lighten-5" id="js_second-page">
-      <div class="container">
+    <div class="grey lighten-5" id="js_second-page">
+      <div class="container" id="archive-vueapp">
+        <ul class="archive-title">
+          <li>
+            <h4>Archives</h4>
+          </li>
+          <template v-if="cardView">
+            <li v-on:click="toggleVue"><i class="material-icons">view_list</i></li>
+          </template>
+          <template v-else>
+            <li v-on:click="toggleVue"><i class="material-icons">view_module</i></li>
+          </template>
+        </ul>
         <div class="row">
-          <div class="col s12 m6 l3">
-            <div class="card">
-              <div class="card-image"><img src="app/assets/images/cap20161130.png"><span class="card-title">2016/11/30</span><a class="btn-floating halfway-fab btn-large waves-effect waves-light red"><i class="material-icons">open_in_browser</i></a></div>
-              <div class="card-content">
-                <p>HTML5とは何か？HTML5でできることとは?またHTML5の勉強方法に関しての説明</p>
+          <template v-if="cardView">
+            <template v-for="item in archives">
+              <div class="col s12 m6 l3">
+                <div class="card hoverable">
+                  <div class="card-image"><img v-bind:src="'app/assets/images/' + item.image"><a class="btn-floating halfway-fab btn-large waves-effect waves-light red" v-bind:href="item.url" target="_blank"><i class="material-icons">link</i></a></div>
+                  <div class="card-content">
+                    <p>{{ item.date }}</p>
+                    <p>{{ item.comment }}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </template>
+          </template>
+          <template v-if="!cardView">
+            <ul class="collection">
+              <template v-for="item in archives">
+                <li class="collection-item avatar"> <img class="circle" v-bind:src="'app/assets/images/' + item.image" v-bind:alt="item.date + 'image'"></li>
+              </template>
+            </ul>
+          </template>
         </div>
       </div>
     </div>

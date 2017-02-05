@@ -1,12 +1,28 @@
-#js_second-page.pink.lighten-5
-    .container
+#js_second-page.grey.lighten-5
+    .container#archive-vueapp
+
+        ul.archive-title
+            li: h4 Archives
+            template(v-if="cardView")
+                li(v-on:click="toggleVue"): i.material-icons view_list
+            template(v-else)
+                li(v-on:click="toggleVue"): i.material-icons view_module
         .row
-            .col.s12.m6.l3
-                .card
-                    .card-image
-                        img(src="app/assets/images/cap20161130.png")
-                        span.card-title 2016/11/30
-                        a.btn-floating.halfway-fab.btn-large.waves-effect.waves-light.red: i.material-icons open_in_browser
-                    .card-content
-                        p HTML5とは何か？HTML5でできることとは?またHTML5の勉強方法に関しての説明
-                    
+            template(v-if="cardView")
+                template(v-for="item in archives")
+                    .col.s12.m6.l3
+                        .card.hoverable
+                            .card-image
+                                img(v-bind:src="'app/assets/images/' + item.image")
+                                //- span.card-title {{ item.date }}
+                                a(v-bind:href="item.url" target="_blank").btn-floating.halfway-fab.btn-large.waves-effect.waves-light.red: i.material-icons link
+                            .card-content
+                                p {{ item.date }}
+                                p {{ item.comment }}
+            template(v-if="!cardView")
+                ul.collection
+                    template(v-for="item in archives")
+                        li.collection-item.avatar 
+                            img.circle(v-bind:src="'app/assets/images/' + item.image" v-bind:alt="item.date + 'image'")
+
+                        
