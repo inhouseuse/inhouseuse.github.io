@@ -100,10 +100,10 @@ $(() => {
 // });
 
 
-const archiveVueApp = new Vue({
-  el: '#archive-vueapp',
+const vueApp = new Vue({
+  el: '#vueapp',
   data: {
-    cardView: false,
+    cardView: true,
     archives: [
       { title: 'inHouseUseの作り方', date: '2017/02/08', image: 'cap20170208_300x200.png', comment: '今まで紹介した技術要素の使いどころを紹介', url: './20170208.html' },
       { title: 'JavaScript 2016 with ES6', date: '2017/01/25', image: 'cap20170118_300x200.png', comment: 'Javascriptの標準仕様 EcmaScript2016についての紹介', url: './20170118.html' },
@@ -119,6 +119,10 @@ const archiveVueApp = new Vue({
       this.cardView = !this.cardView;
     },
   },
+});
+
+$(document).ready(() => {
+  $('.collapsible').collapsible();
 });
 
 // console.log(archiveVueApp.view);

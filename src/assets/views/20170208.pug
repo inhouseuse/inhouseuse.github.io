@@ -1,0 +1,31 @@
+extends layouts/_layout.pug
+
+block title
+  title 20170208
+
+block content
+    -
+      var headerInfo = {
+          color: "teal lighten-2",
+          fix: true
+      }
+    include common/_header.pug
+
+    -
+      var articleInfo = {
+        title: 'inHouseUseの作り方',date: '2017/02/08', image: 'cap20170208_300x200.png', comment: '今まで紹介した技術要素の使いどころを紹介', url: './20170208.html'
+      }
+    include common/_article.pug    
+
+    main.container
+      ul.collection.with-header.collapsible(data-collapsible="expandable")
+        li.collection-header.red-text.accent-2-text: h4 Links
+        li.collection-item
+          i.material-icons.left code
+          span Github
+          a(href="#" target="_blank" class="secondary-content"): i.material-icons.red-text.accent-2-text link
+        li.collection-item.grey-text.darken-1-text
+          - var msg = '<a href="https://github.com/inhouseuse/inhouseuse.github.io/" target="_blank">Github</a>このWebサイトのソースコードを管理しています。「バグを見つけたので直したい！」とか「もっとこうしたら良くなるとか」とかあればGithubで<a href="https://github.com/inhouseuse/inhouseuse.github.io/issues" target="_blank">ISUUE</a>を立てていただけると嬉しいです。'
+          span!=msg
+    
+    include common/_footer.pug

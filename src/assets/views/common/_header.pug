@@ -1,22 +1,46 @@
-header
-    nav.transparent.header-nav
-        div.nav-wrapper
-            div.container
-                a.brand-logo(href="#")
-                    span.header__logo-image
-                    span.header__logo-title InHouseUse
-                a.button-collapse.js_toggleModalLink(data-activates="mobile-demo")
-                    i.material-icons menu
-                ul.right.hide-on-med-and-down
-                    li: a(href="./")
-                        i.material-icons.left home
-                        span Home
-                    li: a(href="./")
-                        i.material-icons.left code
-                        span Github
-                    li: a(href="./")
-                        i.material-icons.left slideshow
-                        span SpeakerDeck
-                    li: a(href="./")
-                        i.material-icons.left mail_outline
-                        span Contact
+header#header
+    if headerInfo.fix
+        .navbar-fixed
+            nav.header-nav(class=headerInfo.color)
+                div.nav-wrapper
+                    div.container
+                        a.brand-logo(href="#")
+                            span.header__logo-image
+                            span.header__logo-title InHouseUse
+                        a.button-collapse.js_toggleModalLink(data-activates="mobile-demo")
+                            i.material-icons menu
+                        ul.right.hide-on-med-and-down
+                            li: a(href="./")
+                                i.material-icons.left home
+                                span Home
+                            li: a(href="https://github.com/inhouseuse")
+                                i.material-icons.left code
+                                span Github
+                            li: a(href="https://speakerdeck.com/undefined_name")
+                                i.material-icons.left slideshow
+                                span SpeakerDeck
+                            li: a(href="https://github.com/codefont")
+                                i.material-icons.left mail_outline
+                                span Contact
+    else
+            nav.header-nav(class=headerInfo.color)
+                div.nav-wrapper
+                    div.container
+                        a.brand-logo(href="#")
+                            span.header__logo-image
+                            span.header__logo-title InHouseUse
+                        a.button-collapse.js_toggleModalLink(data-activates="mobile-demo")
+                            i.material-icons menu
+                        ul.right.hide-on-med-and-down
+                            li: a(href="./")
+                                i.material-icons.left home
+                                span Home
+                            li: a(href="https://github.com/inhouseuse")
+                                i.material-icons.left code
+                                span Github
+                            li: a(href="https://speakerdeck.com/undefined_name")
+                                i.material-icons.left slideshow
+                                span SpeakerDeck
+                            li: a(href="https://github.com/codefont")
+                                i.material-icons.left mail_outline
+                                span Contact
