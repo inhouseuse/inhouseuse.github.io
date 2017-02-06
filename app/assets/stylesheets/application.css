@@ -245,6 +245,11 @@ main {
   font-size: 18px;
 }
 
+.description {
+  line-height: 1.5;
+  margin: 10px 0px;
+}
+
 .footer {
   width: 100%;
   background: #4B4B4B;

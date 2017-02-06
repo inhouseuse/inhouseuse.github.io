@@ -16,3 +16,43 @@
 //-                 script(async class="speakerdeck-embed" data-slide="1" data-id="1b1bd0a37d3748598907123081edbc85" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js")
 //-     include common/_footer.pug
 //-     include common/_javascript.pug
+
+extends layouts/_layout.pug
+
+block title
+  title 2016/11/30
+
+block content
+    -
+      var headerInfo = {
+          color: "teal lighten-2",
+          fix: true
+      }
+    include common/_header.pug
+
+    -
+      var articleInfo = {
+        title: '忙しい人のためのHTML5入門入門',date: '2016/11/30',
+      }
+    include common/_article.pug
+
+    main.container
+      ul.collection.with-header.collapsible(data-collapsible="expandable")
+        li.collection-header
+          div: h4 Links
+          div tags: 
+              span.chip HTML5
+              span.chip CSS3
+              span.chip jQuery
+          //- img.(src="app/assets/images/cap20161207_300x200.png")
+        li.collection-item
+          i.material-icons.left slideshow
+          span SpeakerDeck
+          a(href="https://speakerdeck.com/undefined_name/mang-siiren-falsetamefalsehtml5ru-men-ru-men" target="_blank" class="secondary-content"): i.material-icons.red-text.accent-2-text link
+        li.collection-item.grey-text.darken-1-text
+          - var msg = 'HTML5とは何か。HTML5でできることやその勉強方法について解説しています。'
+          div.description!=msg
+          script(class="speakerdeck-embed" data-id="1b1bd0a37d3748598907123081edbc85" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js")
+            
+    
+    include common/_footer.pug

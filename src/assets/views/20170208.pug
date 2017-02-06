@@ -1,7 +1,7 @@
 extends layouts/_layout.pug
 
 block title
-  title 20170208
+  title 2017/02/08
 
 block content
     -
@@ -19,13 +19,32 @@ block content
 
     main.container
       ul.collection.with-header.collapsible(data-collapsible="expandable")
-        li.collection-header.red-text.accent-2-text: h4 Links
+        li.collection-header
+          div: h4 Links
+          div tags: 
+              span.chip jQuery
+              span.chip ES2016
+              span.chip Sass
+              span.chip CSS3
+              span.chip animation
+              span.chip Responsible
+        li.collection-item
+          i.material-icons.left home
+          span InHouseUse
+          a(href="https://inhouseuse.github.io/" target="_blank" class="secondary-content"): i.material-icons.red-text.accent-2-text link
+        li.collection-item.grey-text.darken-1-text
+          -
+            var msg = 
+            `社内向け勉強会用のポータルサイト<a href="https://inhouseuse.github.io/" target="_blank">InHouseUse</a>の作り方について紹介します。
+            今まで紹介してきた技術要素を実際に使って作っていますので、ソースとセットでご覧ください。
+            `
+          div.description!=msg          
         li.collection-item
           i.material-icons.left code
           span Github
-          a(href="#" target="_blank" class="secondary-content"): i.material-icons.red-text.accent-2-text link
+          a(href="https://github.com/inhouseuse/inhouseuse.github.io/" target="_blank" class="secondary-content"): i.material-icons.red-text.accent-2-text link
         li.collection-item.grey-text.darken-1-text
           - var msg = '<a href="https://github.com/inhouseuse/inhouseuse.github.io/" target="_blank">Github</a>このWebサイトのソースコードを管理しています。「バグを見つけたので直したい！」とか「もっとこうしたら良くなるとか」とかあればGithubで<a href="https://github.com/inhouseuse/inhouseuse.github.io/issues" target="_blank">ISUUE</a>を立てていただけると嬉しいです。'
-          span!=msg
+          div.description!=msg
     
     include common/_footer.pug

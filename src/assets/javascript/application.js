@@ -106,10 +106,10 @@ const vueApp = new Vue({
     cardView: true,
     archives: [
       { title: 'inHouseUseの作り方', date: '2017/02/08', image: 'cap20170208_300x200.png', comment: '今まで紹介した技術要素の使いどころを紹介', url: './20170208.html' },
-      { title: 'JavaScript 2016 with ES6', date: '2017/01/25', image: 'cap20170118_300x200.png', comment: 'Javascriptの標準仕様 EcmaScript2016についての紹介', url: './20170118.html' },
+      { title: 'JavaScript 2016 with ES6', date: '2017/01/25', image: 'cap20170118_300x200.png', comment: 'Javascriptの標準仕様 EcmaScript2016についての紹介', url: './20170125.html' },
       { title: 'フロントエンド開発環境②', date: '2017/01/18', image: 'cap20170111_300x200.png', comment: '引き続き開発環境周りの解説', url: './20170111.html' },
       { title: 'フロントエンド開発環境①', date: '2017/01/11', image: 'cap20170111_300x200.png', comment: 'フロントエンド開発環境の定番に関して実例とセットで解説', url: './20170111.html' },
-      { title: 'jQueryを使ってみよう②', date: '2016/12/14', image: 'cap20161214_300x200.png', comment: 'jQueryの使い方を実例を使って説明。Ajaxのとは何か？という内容についても解説', url: './20161214.html' },
+      { title: 'jQueryを使ってみよう②', date: '2016/12/14', image: 'cap20161214_300x200.png', comment: 'jQueryの使い方を実例を使って説明。Ajaxとは何か？という内容についても解説', url: './20161207.html' },
       { title: 'jQueryを使ってみよう①', date: '2016/12/07', image: 'cap20161207_300x200.png', comment: 'jQueryの使い方を基本から説明。ID/Classセレクタの使い方や導入手順を説明', url: './20161207.html' },
       { title: '忙しい人のためのHTML5入門入門', date: '2016/11/30', image: 'cap20161130_300x200.png', comment: 'HTML5とは何か？HTML5でできることとは?またHTML5の勉強方法に関しての説明', url: './20161130.html' },
     ],

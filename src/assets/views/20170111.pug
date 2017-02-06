@@ -1,18 +1,58 @@
-//- doctype html
-//- html(lang="ja")
-//- //- include common/_html_head.pug
-//- body
-//-     include common/_header_black.pug
-//-     section.archivepage.js_page
-//-         .container
-//-             h2.page-title 2017-01-11 Contents
-//-             h3.archive__link
-//-                 a.archive__anchor(href="https://github.com/inhouseuse/frontend_dev", target="_blank")
-//-                     i.fa.fa-github-alt(aria-hidden="true")  Github
-//-             h3.archive__link
-//-                 a.archive__anchor(href="https://speakerdeck.com/undefined_name/mang-siiren-falsetamefalsehurontoentokai-fa-huan-jing-rainnatuhu?slide=1", target="_blank")
-//-                     i.fa.fa-external-link(aria-hidden="true")  Slide
-//-             .slide
-//-                 script(async class="speakerdeck-embed" data-slide="1" data-id="f505abf9136149d6bfc45be0d9fbbad4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js")
-//-     include common/_footer.pug
-//-     include common/_javascript.pug
+extends layouts/_layout.pug
+
+block title
+  title 2017/01/11-18
+
+block content
+    -
+      var headerInfo = {
+          color: "teal lighten-2",
+          fix: true
+      }
+    include common/_header.pug
+
+    -
+      var articleInfo = {
+        title: 'フロントエンド開発環境',date: '2017/01/11,18',
+      }
+    include common/_article.pug
+
+    main.container
+      ul.collection.with-header.collapsible(data-collapsible="expandable")
+        li.collection-header
+          div: h4 Links
+          div tags: 
+              span.chip development
+              span.chip vscode
+              span.chip Emmet
+              span.chip Pug
+              span.chip BEM
+              span.chip Nodejs
+              span.chip ES2015
+              span.chip babel
+              span.chip Browserify
+              span.chip Gulp
+              span.chip Typescript
+              span.chip Vue.js
+              span.chip Sass
+              span.chip Bootstrap
+              span.chip Browser-sync
+          //- img.(src="app/assets/images/cap20161207_300x200.png")
+        li.collection-item
+          i.material-icons.left code
+          span Github
+          a(href="https://github.com/inhouseuse/frontend_dev" target="_blank" class="secondary-content"): i.material-icons.red-text.accent-2-text link
+        li.collection-item.grey-text.darken-1-text
+          - var msg = 'スライドで見るだけでは、なかなか便利さや使いどころが伝わりにくいと思いますので、実際にソースをダウンロードして試してみてください。また、開発環境の構築方法や事前準備などはREADMEに書いてますのでそちらでご確認ください。'
+          div.description!=msg
+        li.collection-item
+          i.material-icons.left slideshow
+          span SpeakerDeck
+          a(href="https://speakerdeck.com/undefined_name/mang-siiren-falsetamefalsehurontoentokai-fa-huan-jing-rainnatuhu" target="_blank" class="secondary-content"): i.material-icons.red-text.accent-2-text link
+        li.collection-item.grey-text.darken-1-text
+          - var msg = '<a href="https://speakerdeck.com/undefined_name/mang-siiren-falsetamefalsehurontoentokai-fa-huan-jing-rainnatuhu" target="_blank">SpeakerDeck</a>開発環境まわりのラインナップをHTML/CSS/Javascript周りに特化して解説しています。2016年で割と定番となっているものを紹介していますので、下のソースコードとあわせてご確認ください。'
+          div.description!=msg
+          script(class="speakerdeck-embed" data-id="f505abf9136149d6bfc45be0d9fbbad4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js")          
+
+    
+    include common/_footer.pug

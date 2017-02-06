@@ -1,0 +1,37 @@
+extends layouts/_layout.pug
+
+block title
+  title 2017/01/25
+
+block content
+    -
+      var headerInfo = {
+          color: "teal lighten-2",
+          fix: true
+      }
+    include common/_header.pug
+
+    -
+      var articleInfo = {
+        title: 'JavaScript 2016 with ES6',date: '2017/01/25',
+      }
+    include common/_article.pug
+
+    main.container
+      ul.collection.with-header.collapsible(data-collapsible="expandable")
+        li.collection-header
+          div: h4 Links
+          div tags: 
+              span.chip ES2016
+              span.chip babel
+          //- img.(src="app/assets/images/cap20161207_300x200.png")
+        li.collection-item
+          i.material-icons.left slideshow
+          span SpeakerDeck
+          a(href="https://speakerdeck.com/undefined_name/mang-siiren-falsetamefalsehurontoentokai-fa-huan-jing-rainnatuhu" target="_blank" class="secondary-content"): i.material-icons.red-text.accent-2-text link
+        li.collection-item.grey-text.darken-1-text
+          - var msg = 'Javascriptの標準仕様改訂の中で大きな変更となったES2015(ES6)に関して、解説を<a href="https://speakerdeck.com/undefined_name/mang-siiren-falsetamefalsehurontoentokai-fa-huan-jing-rainnatuhu" target="_blank">SpeakerDeck</a>に載せてます。様々な機能が追加され便利になっていますので一度ご確認ください。'
+          div.description!=msg
+          script(class="speakerdeck-embed" data-id="3475027254364acaa2b2691726a1fc66" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js")
+    
+    include common/_footer.pug
